@@ -37,16 +37,42 @@
   <div class="navbar-brand">
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
+  <div class="main-nav-links hidden">
+    <a class="nav-link" href="#" id="nav-submit-story">submit</a>
+    <a class="nav-link" href="#" id="nav-favorites">favorites</a>
+    <a class="nav-link" href="#" id="nav-my-stories">my&nbsp;stories</a>
+  </div>
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
   </div>
+  
 </nav>
 
 <!-- area for stories (all stories, user stories, favorites) -->
 <section class="stories-container container">
-
+  <!-- Add new story form -->
+  <form
+    action="#"
+    id="new-story-form"
+    class="hidden">
+      <h4>Add New Story</h4>
+      <div class="login-input">
+        <label for="new-story-title">story title</label>
+        <input id="new-story-title" required autocomplete="new-story" type="text">
+      </div>
+      <div class="login-input">
+        <label for="new-story-author">story author</label>
+        <input id="new-story-author" required autocomplete="Me" type="text">
+      </div>
+      <div class="login-input">
+        <label for="new-story-url">story url</label>
+        <input id="new-story-url" required autocomplete="https://www.google.com/" type="text">
+      </div>
+      <button type="submit">submit</button>
+      <hr>
+    </form>
   <!-- loading message (removed by JS after stories loaded) -->
   <div id="stories-loading-msg">Loading&hellip;</div>
 
@@ -94,11 +120,14 @@
     </div>
     <button type="submit">create account</button>
   </form>
+  
 </section>
+
+
 
 <!-- Library JS & our JS -->
 <script src="https://unpkg.com/jquery"></script>
-<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="js/models.js"></script>
 <script src="js/main.js"></script>
